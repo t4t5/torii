@@ -22,7 +22,7 @@ function fbLoad(settings){
       FB.init(settings);
       Ember.run(null, resolve);
     };
-    $.getScript('//connect.facebook.net/' + locale + '/sdk.js');
+    Ember.$.getScript('//connect.facebook.net/' + locale + '/sdk.js');
   }).then(function(){
     window.fbAsyncInit = original;
     if (window.fbAsyncInit) {
